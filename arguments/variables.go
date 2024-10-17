@@ -4,6 +4,20 @@ import "fmt"
 
 func Variables() {
 
+	fmt.Println("Se vedi questo messaggio non c'é nulla di attivo in variables.go \n")
+
+	// Principali interpolazioni
+	// %v per valori normali
+	// %s per stringhe
+	// %d per numeri interi
+	// %f per numeri con parte decimale
+	// %t per valori booleani
+	// %q per stringhe tra virgolette
+
+	// fmt.Printf("Lui è %v \n", "Mario") // comune e vale  un po' per tutto
+	// fmt.Printf("Lui è %s \n", "Mario") // esclusivo per stringhe
+	// fmt.Printf("Lui é %q \n", "Mario") // mette le virgolette e funziona solo per stringhe
+
 	// Tipizzazione base delle variabili in go
 	// bool (true/false)
 	// string ("Hello, World!")
@@ -21,7 +35,6 @@ func Variables() {
 	// var username string
 
 	// Le stampo in console con valori non assegnati: 0 0 false ""
-	// %d per stampare valori numerici interi, %f per stampare valori numerici con virgola, %t per stampare valori booleani, %q per stampare stringhe tra virgolette
 	// fmt.Printf("smsSendingLimit: %d, costPerSms: %f, hasPemission: %t, username: %q \n", smsSendingLimit, costPerSms, hasPemission, username)
 
 	// Dichiaro variabili in modalitá tipizzata dinamicamente (go riconosce questa come sting in automatico)
@@ -51,7 +64,8 @@ func Variables() {
 	const allSmsCost = costPerSms * numbersOfSms
 	fmt.Printf("AllSmsCost: %d \n", allSmsCost) */
 
-	const costPerSms, numbersOfSms = 1, 100
-	const allSmsCost = costPerSms * numbersOfSms
-	fmt.Printf("AllSmsCost: %d \n", allSmsCost)
+	// const costPerSms, numbersOfSms = 1, 100
+	// const allSmsCost = costPerSms * numbersOfSms
+	// fmt.Printf("AllSmsCost: %d \n", allSmsCost)
+
 }
