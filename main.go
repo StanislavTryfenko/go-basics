@@ -6,5 +6,5 @@ import (
 
 func main() {
 	arguments.Variables()
+	arguments.Functions()
 }
-
