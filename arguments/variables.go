@@ -4,7 +4,7 @@ import "fmt"
 
 func Variables() {
 
-	fmt.Println("Se vedi questo messaggio non c'é nulla di attivo in variables.go \n")
+	fmt.Printf("Se vedi questo messaggio non c'é nulla di attivo in variables.go \n")
 
 	// Principali interpolazioni
 	// %v per valori normali

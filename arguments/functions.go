@@ -4,13 +4,14 @@ import (
 	"fmt"
 )
 
+// In go non si puo' dichiarare una funzione dentro una funzione
+/* func sub(x int, y int) int {
+	return x - y
+} */
+
 func Functions() {
-	// fmt.Println("Se vedi questo messaggio non c'é nulla di attivo in functions.go \n")
 
-    func sub(x int, y int) int {
-        return x - y
-    }
+	fmt.Printf("Se vedi questo messaggio non cù nulla di attivo in functions.go \n")
 
-	fmt.Println(sub(10, 5))
+	//fmt.Printf(sub(10, 5))
 }
-
