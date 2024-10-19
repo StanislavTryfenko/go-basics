@@ -4,7 +4,7 @@ import "fmt"
 
 func Variables() {
 
-	fmt.Printf("Se vedi questo messaggio non c'é nulla di attivo in variables.go \n")
+	//fmt.Println("Se vedi questo messaggio non c'é nulla di attivo in variables.go")
 
 	// Principali interpolazioni
 	// %v per valori normali
@@ -29,33 +29,33 @@ func Variables() {
 	// complex64 complex128 ( numeri complessi es. 1+2i)
 
 	// In questo modo dichiaro variabili con una precisa tipizzazione statica (estremamente efficente)
-	// var smsSendingLimit int
-	// var costPerSms float32
-	// var hasPemission bool
-	// var username string
+	var smsSendingLimit int
+	var costPerSms float32
+	var hasPemission bool
+	var username string
 
 	// Le stampo in console con valori non assegnati: 0 0 false ""
-	// fmt.Printf("smsSendingLimit: %d, costPerSms: %f, hasPemission: %t, username: %q \n", smsSendingLimit, costPerSms, hasPemission, username)
+	fmt.Printf("smsSendingLimit: %d, costPerSms: %f, hasPemission: %t, username: %q \n", smsSendingLimit, costPerSms, hasPemission, username)
 
 	// Dichiaro variabili in modalitá tipizzata dinamicamente (go riconosce questa come sting in automatico)
 	// int
-	// euroPerText := 1
-	// fmt.Printf("Il valore di euroPerText é %T \n", euroPerText) // Uso %T per stampareil tipo della variabile
+	euroPerText := 1
+	fmt.Printf("Il valore di euroPerText é %T \n", euroPerText) // Uso %T per stampareil tipo della variabile
 
 	// float64
-	// euroPerText := 1.0
-	// fmt.Printf("Il valore di euroPerText è %T \n", euroPerText)
+	euroPerText = 1.0
+	fmt.Printf("Il valore di euroPerText è %T \n", euroPerText)
 
 	// Dichiarazione di piú variabili assieme
-	// smsSendingLimit, costPerSms, hasPemission, username := 100, 0.05, true, "mario"
-	// fmt.Printf("smsSendingLimit: %d, costPerSms: %f, hasPemission: %t, username: %q \n", smsSendingLimit, costPerSms, hasPemission, username)
+	smsSendingLimit, costPerSms, hasPemission, username = 100, 0.05, true, "mario"
+	fmt.Printf("smsSendingLimit: %d, costPerSms: %f, hasPemission: %t, username: %q \n", smsSendingLimit, costPerSms, hasPemission, username)
 
 	// Cambio tipo a una variabile
-	// euroPerText := 1.2
-	// euroPerTextInt := int(euroPerText) // In questo caso il valore verrá troncato
+	//euroPerText = 1.2
+	euroPerTextInt := int(euroPerText) // In questo caso il valore verrá troncato
 
-	// fmt.Printf("Il valore di euroPerTextInt è %T \n", euroPerTextInt)
-	// fmt.Printf("Il valore di euroPerTextInt è %v \n", euroPerTextInt)
+	fmt.Printf("Il valore di euroPerTextInt è %T \n", euroPerTextInt)
+	fmt.Printf("Il valore di euroPerTextInt è %v \n", euroPerTextInt)
 
 	// Le costanti in Go vengono registrate durante la compilazione e non durante l'esecuzione
 
@@ -64,8 +64,21 @@ func Variables() {
 	const allSmsCost = costPerSms * numbersOfSms
 	fmt.Printf("AllSmsCost: %d \n", allSmsCost) */
 
-	// const costPerSms, numbersOfSms = 1, 100
-	// const allSmsCost = costPerSms * numbersOfSms
-	// fmt.Printf("AllSmsCost: %d \n", allSmsCost)
+	/* const costPerSms, numbersOfSms = 1, 100
+	const allSmsCost = costPerSms * numbersOfSms
+	fmt.Printf("AllSmsCost: %d \n", allSmsCost) */
 
+	// Go permette di creare variabili monouso all'interno di if, cicli etc...
+
+	// Da cosi (con variabile monouso che rimane nel codice)
+	// length := getLenght(qualcosa)
+	// if length > 0 {
+	// 	fmt.Printf("La stringa ha %d caratteri \n", length)
+	// }
+
+	// A questo (con variabile monouso che con scope chiuso nell'if)
+	qualcosa := "abaco"
+	if length := len(qualcosa); length > 0 {
+		fmt.Printf("La stringa ha %d caratteri \n", length)
+	}
 }

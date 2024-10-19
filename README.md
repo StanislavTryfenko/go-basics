@@ -1,0 +1,1 @@
+Questa repo serve a me per imparare i fondamenti di un nuovo linguaggio, in questo caso Go.
